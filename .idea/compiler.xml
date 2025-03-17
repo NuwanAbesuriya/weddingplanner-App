@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="budget-tracking-service" />
+        <module name="config-server" />
+        <module name="vendor-service" />
+        <module name="discovery" />
+        <module name="notification-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="17" />
+      <module name="guest-manage-service" target="17" />
+      <module name="shared-library" target="17" />
+      <module name="task-manage-service" target="17" />
+      <module name="wedd-event-service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="budget-tracking-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+      <module name="guest-manage-service" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
+      <module name="shared-library" options="-parameters" />
+      <module name="task-manage-service" options="-parameters" />
+      <module name="vendor-service" options="-parameters" />
+      <module name="wedd-event-service" options="-parameters" />
+    </option>
+  </component>
+</project>

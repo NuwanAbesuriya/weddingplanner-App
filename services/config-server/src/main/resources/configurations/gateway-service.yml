@@ -1,0 +1,33 @@
+#server:
+#  port: 8000
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: guest-service
+          uri: lb:http://GUEST-SERVICE
+          predicates:
+            - Path=/api/guests/**
+        - id: budget-tracking-service
+          uri: lb:http://BUDGET-TRACKING-SERVICE
+          predicates:
+            - Path=/api/budgets/**
+        - id: notification-service
+          uri: lb:http://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/notifications/**
+        - id: task-service
+          uri: lb:http://TASK-SERVICE
+          predicates:
+            - Path=/tasks/**
+        - id: vendor-service
+          uri: lb:http://VENDOR-SERVICE
+          predicates:
+            - Path=/api/vendors/**
+        - id: event-service
+          uri: lb:http://EVENT-SERVICE
+          predicates:
+            - Path=/api/event/**
